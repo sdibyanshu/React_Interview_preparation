@@ -1,10 +1,10 @@
 
 import './App.css';
-import Useeffect from './Components/UseEffect/Useeffect';
+import Usememo from './Components/Usememo/Usememo';
 function App() {
   return (
     <div className="App">
-  <Useeffect/>
+  <Usememo/>
     </div>
   );
 }
