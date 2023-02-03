@@ -31,7 +31,7 @@ const RenderAll = () => {
    <h1>Render the array of object and place  a delete button </h1>
    {text.map((el)=> 
    <li key={el.id}
-   >{el.id}{el.type}
+   >{el.type}
    <button onClick={()=>HandleDelete(el.id)}>delete</button>
    
    </li>

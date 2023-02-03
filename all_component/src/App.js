@@ -1,13 +1,11 @@
 
-
-import RenderAll from './All_Components/Render_ArrayOfObj/Render';
 import './App.css';
+import RenderAll from './Components/Render_ArryOfObj/RenderAll';
 
 function App() {
   return (
     <div className="App">
-      
-     <RenderAll/>
+      <RenderAll/>
     </div>
   );
 }

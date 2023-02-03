@@ -6,6 +6,14 @@
   height: 40vmin;
   pointer-events: none;
 }
+button{
+  border-radius: 30px;
+  margin:10px 20px;
+  background-color: teal;
+  border: none;
+ 
+
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+// Simple TODO with CRUD-----------
 import "./App.css";
 
 import React, { useState } from "react";
@@ -8,12 +8,12 @@ export default function Todo() {
   const [Todo, SetTodo] = useState([]);
   const [editid, SetEditID] = useState(0);
 
-  const handleChange = (e) => {
-    SetText(e.target.value);
-  };
+  // const handleChange = (e) => {
+  //   SetText(e.target.value);
+  // };
 
   const HandleClick = () => {
-    // edit function
+    // edit function-------------------------------------------
     if (editid) {
       const EditTodo = Todo.find((el) => el.id === editid);
       const UpdateTodo = Todo.map((t) =>
@@ -27,8 +27,11 @@ export default function Todo() {
       return;
     }
 
+    // Add function--------------------------
+
     if (text !== "") {
-      SetTodo([{ id: `${text}-${Date.now}`, text }, ...Todo]);
+      const NewTodo=([{ id: `${text}-${Date.now}`, text }, ...Todo]);
+      SetTodo(NewTodo)
       SetText("");
     }
   };
@@ -46,8 +49,8 @@ export default function Todo() {
 
   return (
     <>
-      <div>
-        <input onChange={handleChange} value={text} placeholder="enter task" />
+      <div className="app">
+        <input onChange={(e)=>SetText(e.target.value)} value={text} placeholder="enter task" />
 
         <button onClick={HandleClick}>{editid ? "Edit" : "Add"}</button>
 
@@ -64,3 +67,6 @@ export default function Todo() {
     </>
   );
 }
+
+
+
