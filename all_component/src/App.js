@@ -1,10 +1,10 @@
 
 import './App.css';
-import Input from './Components/InputBox/Input';
+import Useeffect from './Components/UseEffect/Useeffect';
 function App() {
   return (
     <div className="App">
-  <Input/>
+  <Useeffect/>
     </div>
   );
 }
