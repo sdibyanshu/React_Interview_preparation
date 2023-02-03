@@ -291,8 +291,8 @@ function Useref() {
     return (
     <div>
     <h1>Use Ref in react</h1>
-<input type="text" placeholder='Enter your Text here' ref={inputRef} />
-<button onClick={handleClick}>Click me</button>
+<!-- <input type="text" placeholder='Enter your Text here' ref={inputRef} />
+<button onClick={handleClick}>Click me</button> -->
 
 
     </div>
