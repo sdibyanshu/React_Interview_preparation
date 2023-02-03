@@ -28,11 +28,21 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main{
+  
+  width: 90%;
+  margin: auto;
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(auto,200px);
+  gap: 30px;
+}
+.main>div{
+  height: 400px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.main>div>img{
+width: 90%;
+height: 50%;
 }
