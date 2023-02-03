@@ -1,13 +1,10 @@
 
 import './App.css';
-// import RenderAll from './Components/Render_ArryOfObj/RenderAll';
-
-import Fetch from './Components/Fetch/Fetch';
+import Useref from './Components/Useref/Useref';
 function App() {
   return (
     <div className="App">
-      {/* <RenderAll/> */}
-      <Fetch/>
+   <Useref/>
     </div>
   );
 }
