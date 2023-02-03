@@ -1,10 +1,10 @@
 
 import './App.css';
-import Useref from './Components/Useref/Useref';
+import Input from './Components/InputBox/Input';
 function App() {
   return (
     <div className="App">
-   <Useref/>
+  <Input/>
     </div>
   );
 }
