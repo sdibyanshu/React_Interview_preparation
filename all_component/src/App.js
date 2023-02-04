@@ -1,11 +1,11 @@
+import "./App.css";
+import EventHandle from "./Components/MiniCalculator/Event";
 
-import './App.css';
-import Parent from './Components/Props_Usecase/Parent';
 
 function App() {
   return (
     <div className="App">
- <Parent/>
+      <EventHandle />
     </div>
   );
 }
