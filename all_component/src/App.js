@@ -1,10 +1,11 @@
 
 import './App.css';
-import Usememo from './Components/Usememo/Usememo';
+import Parent from './Components/Props_Usecase/Parent';
+
 function App() {
   return (
     <div className="App">
-  <Usememo/>
+ <Parent/>
     </div>
   );
 }
