@@ -7,7 +7,8 @@ const [count, setcount] = useState(0);
  useEffect(()=>{
 console.warn("hello")
  },[count])
-//  Note:THis useEffect will only be updated when there is a change in useEffect refer to youtube video for more information:https://youtu.be/zJeyz5mIXGQ
+
+ //  Note:THis useEffect will only be updated when there is a change in useEffect refer to youtube video for more information:https://youtu.be/zJeyz5mIXGQ
  
  
     return (
