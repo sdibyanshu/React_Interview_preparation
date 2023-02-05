@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../../App.css"
+import "../../App.css";
 
 const getData = async (url) => {
   let res = await fetch(url);
@@ -29,9 +29,11 @@ function Fetch() {
         </div>
       ))}
     </div>
-     
+
     </>
   );
 }
 
 export default Fetch;
+
+

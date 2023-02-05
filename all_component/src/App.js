@@ -1,13 +1,14 @@
+import "./App.css";
+import EventHandle from "./Components/MiniCalculator/Event";
+
 
 import './App.css';
-import Fetch from './Components/Fetch/Fetch';
-
+import Usememo from './Components/Usememo/Usememo';
 function App() {
   return (
     <div className="App">
-        <Fetch/>
     </div>
-  );
+  )
 }
 
 export default App;
