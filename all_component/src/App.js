@@ -1,10 +1,11 @@
 
 import './App.css';
-import Usememo from './Components/Usememo/Usememo';
+import Fetch from './Components/Fetch/Fetch';
+
 function App() {
   return (
     <div className="App">
-  <Usememo/>
+        <Fetch/>
     </div>
   );
 }

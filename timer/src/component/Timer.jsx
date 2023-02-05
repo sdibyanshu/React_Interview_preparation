@@ -12,6 +12,7 @@ const  Timer = () => {
   useEffect(() => {
     let interval = null;
     if (isRunning) {
+
       interval = setInterval(() => {
         setTime(prevTime => {
           let { hours, minutes, seconds } = prevTime;
@@ -29,6 +30,7 @@ const  Timer = () => {
           return { hours, minutes, seconds };
         });
       }, 1000);
+      
     }
     return () => clearInterval(interval);
   }, [isRunning]);
