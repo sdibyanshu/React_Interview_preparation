@@ -3,10 +3,12 @@ import EventHandle from "./Components/MiniCalculator/Event";
 
 
 import './App.css';
-import Usememo from './Components/Usememo/Usememo';
+
+import Input from "./Components/InputBox/Input";
 function App() {
   return (
     <div className="App">
+       <Input/>
     </div>
   )
 }

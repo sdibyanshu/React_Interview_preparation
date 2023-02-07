@@ -11,19 +11,13 @@ const EventHandle = () => {
     const AddNums=(num1,num2)=>{
        const result= Number(num1)+ Number(num2)
        Setadd3(result)
-       
-        
-
     }
+
     const SubNums=(num1,num2)=>{
         const result= Number(num1)- Number(num2)
         Setadd3(result)
-       
-        
-        
-         
- 
      }
+     
     const MulNums=(num1,num2)=>{
         const result= Number(num1) * Number(num2)
         Setadd3(result)
