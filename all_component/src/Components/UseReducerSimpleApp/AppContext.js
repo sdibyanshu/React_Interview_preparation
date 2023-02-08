@@ -13,18 +13,29 @@ const initialState = {
 const reducer = (action, state) => {
   switch (action.type) {
     case action.LOADING:
-      return {};
+      return {
+        ...state,
+        status:action.LOADING
+
+      };
     case action.SUCESS:
-      return {};
+      return {
+    ...state,
+    status: action.SUCESS
+
+      };
     case action.ERROR:
-      return {};
+      return {
+        ...state,
+        status: action.ERROR
+      };
     default:
       return state;
   }
 };
 
-export const AppContextProvider = createContext();
-function AppContext({ children }) {
+export const AppContext = createContext();
+function AppContextProvider({ children }) {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
@@ -34,4 +45,3 @@ function AppContext({ children }) {
   );
 }
 
-export default AppContext;

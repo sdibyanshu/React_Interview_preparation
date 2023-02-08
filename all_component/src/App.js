@@ -1,11 +1,10 @@
 import "./App.css";
-import Event from "./Components/MiniCalculator/Event"
-
+import SimpleApp from "./Components/UseReducerSimpleApp/SimpleApp";
 
 function App() {
   return (
     <div className="App">
-       <Event/>
+       <SimpleApp/>
     </div>
   )
 }
