@@ -390,11 +390,7 @@ import React from 'react'
 
 function Render(){
 
-
-
-// Render A object
-
-
+ Render A object
 const obj={
     name:"Amit",
     age:45,
@@ -402,10 +398,6 @@ const obj={
     profession:"Software Developer",
     education:"Graduate"
 }
-
-
-
-
 return(
     <>
  {
@@ -415,12 +407,8 @@ return(
       </li>
     ))
  }
-
-
-
     </>
 )
-
 
 }
 export default Render;

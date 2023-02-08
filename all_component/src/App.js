@@ -1,11 +1,11 @@
 import "./App.css";
-import Render from "./Components/Render_object/Render";
+import UseReducer from "./Components/Counter_useReducer/UseReducer";
 
 
 function App() {
   return (
     <div className="App">
-       <Render/>
+       <UseReducer/>
     </div>
   )
 }
