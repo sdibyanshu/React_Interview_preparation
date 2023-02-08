@@ -402,9 +402,9 @@ return(
     <>
  {
     Object.entries(obj).map(([key,value])=>(
-      <li key={key}>
+      li key={key}>
         {key}:{value}
-      </li>
+      /li>
     ))
  }
     </>
