@@ -1,11 +1,11 @@
 import "./App.css";
-import UseReducer from "./Components/Counter_useReducer/UseReducer";
+import Event from "./Components/MiniCalculator/Event"
 
 
 function App() {
   return (
     <div className="App">
-       <UseReducer/>
+       <Event/>
     </div>
   )
 }
