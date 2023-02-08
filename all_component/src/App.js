@@ -1,11 +1,14 @@
 import "./App.css";
-import EventHandle from "./Components/MiniCalculator/Event";
+import FetchPagination from "./Components/FetchPagination/FetchPagination";
+import St from "./Components/StopWatch/St";
+
+import StopWatch from "./Components/StopWatch/StopWatch";
 
 
 function App() {
   return (
     <div className="App">
-      <EventHandle />
+     <FetchPagination/>
     </div>
   )
 }
