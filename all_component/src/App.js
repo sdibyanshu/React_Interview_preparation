@@ -1,14 +1,13 @@
 import "./App.css";
-
-import Useeffect from "./Components/UseEffect/Useeffect";
+import EventHandle from "./Components/MiniCalculator/Event";
 
 
 function App() {
   return (
     <div className="App">
-      <Useeffect/>
+      <EventHandle />
     </div>
-  );
+  )
 }
 
 export default App;

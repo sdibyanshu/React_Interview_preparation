@@ -21,12 +21,14 @@ function Todo() {
     settask("");
   };
   // For deleting a particular task
+ 
   const handledelete = (id) => {
     const removeitem = data.filter((el) => {
       return el.id !== id;
     });
     setdata(removeitem);
   };
+ 
   console.log(data, "data");
   return (
     <div>

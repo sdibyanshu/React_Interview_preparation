@@ -377,3 +377,100 @@ function Input() {
 }
 
 export default Input;
+
+
+
+
+
+
+
+# Render a Object in Reactjs..............
+
+import React from 'react'
+
+function Render(){
+
+ Render A object
+const obj={
+    name:"Amit",
+    age:45,
+    address:"Delhi",
+    profession:"Software Developer",
+    education:"Graduate"
+}
+return(
+    <>
+ {
+    Object.entries(obj).map(([key,value])=>(
+      li key={key}>
+        {key}:{value}
+      /li>
+    ))
+ }
+    </>
+)
+
+}
+export default Render;
+
+
+
+
+# Counter Using Usereducer hook in Reactjs..............
+
+import React,{useReducer,useState} from "react";
+
+
+const Reducer=(state,action)=>{
+   switch(action.type){
+
+   case "INCREMENT":return state+1
+
+   case "DECREMENT":return state-1;
+
+   case "RESET":return 0;
+   
+ case "UPDATE":return state+action.payload;
+
+ case "DECRESEBYVAL":return state-action.payload
+   default:return state;
+
+
+
+   }
+}
+
+const initialState=0
+
+function UseReducer(){
+const [state, dispatch] = useReducer(Reducer,initialState);
+
+const [val,setval]=useState('');
+
+
+return(
+    <>
+
+
+ 
+ 
+ 
+        <h1>A basic Counter but by using UseReducer hook</h1>
+
+ h1>{state}h1
+ button onClick={()=>dispatch({type:"INCREMENT"})}>INC button
+ button onClick={()=>dispatch({type:"RESET"})}>RESET button
+ button onClick={()=>dispatch({type:"DECREMENT"})} disabled={state<1}>DEC button
+ 
+ INcrease The counter by that Value of input box
+input type="text" placeholder="Enter value here" onChange={(e)=>setval(Number(e.target.value))}/>
+
+ button onClick={()=>dispatch({type:"UPDATE",payload:val})}>INCBYVAL button
+ button onClick={()=>dispatch({type:"DECRESEBYVAL",payload:val})}>DECBYVAL button
+
+    </button>
+)
+
+}
+
+export default UseReducer;
