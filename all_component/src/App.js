@@ -1,14 +1,11 @@
 import "./App.css";
-import EventHandle from "./Components/MiniCalculator/Event";
+import Render from "./Components/Render_object/Render";
 
 
-import './App.css';
-
-import Input from "./Components/InputBox/Input";
 function App() {
   return (
     <div className="App">
-       <Input/>
+       <Render/>
     </div>
   )
 }
