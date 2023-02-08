@@ -46,3 +46,30 @@
 width: 90%;
 height: 50%;
 }
+
+.newform{
+
+  border: 1px solid black;
+  padding: 20px 20px;
+  margin: auto;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+
+.newform input{
+  padding: 10px
+  
+
+
+}
+.card{
+  border: outset;
+  border-color: blue;
+  width: 20%;
+  height: 300px;
+  padding: 10px;
+  box-shadow: sandybrown;
+  position: absolute;
+  left: 40%;
+}

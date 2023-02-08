@@ -5,8 +5,11 @@ function Useeffect() {
 const [count, setcount] = useState(0);
 
  useEffect(()=>{
-console.warn("hello")
+console.log("hello")
  },[count])
+
+ console.log("hello 2")
+
 
  //  Note:THis useEffect will only be updated when there is a change in useEffect refer to youtube video for more information:https://youtu.be/zJeyz5mIXGQ
  
