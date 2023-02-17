@@ -1,12 +1,12 @@
 
 import './App.css';
-import Counter from './Pages/Counter';
+import Data from "./Pages/Data"
 
 function App() {
   return (
     <div className="App">
-      Hello user
-      <Counter/>
+    
+      <Data/>
     </div>
   );
 }
