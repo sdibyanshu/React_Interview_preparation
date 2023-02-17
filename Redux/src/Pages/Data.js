@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, {useEffect } from "react";
 
 import { useSelector, useDispatch } from "react-redux";
-
 import { getAlldata } from "../Redux/Fetch/fetch.action";
 
 function Data() {
   const { data, isLoading, isError } = useSelector((store) => store.data);
-
   const dispatch = useDispatch();
 
   useEffect(() => {
