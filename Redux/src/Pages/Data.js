@@ -1,7 +1,7 @@
 import React, {useEffect } from "react";
 
 import { useSelector, useDispatch } from "react-redux";
-import { getAlldata } from "../Redux/Fetch/fetch.action";
+import { getAlldata ,Ascendingdata,Descendingdata} from "../Redux/Fetch/fetch.action";
 
 function Data() {
   const { data, isLoading, isError } = useSelector((store) => store.data);
@@ -22,6 +22,9 @@ function Data() {
 
   return (
     <>
+      <label htmlFor="">Sorting</label>
+      
+      
       <div>
         {data.map((el) => (
           <div>

@@ -1,4 +1,4 @@
-import {GET_DATA,GET_LOADING_DATA,GET_DATA_ERROR} from "./fetch.actiontype";
+import {GET_DATA,GET_LOADING_DATA,GET_DATA_ERROR,GET_ASC,GET_DESC} from "./fetch.actiontype";
 
 const initialState={
     isLoading: false,
@@ -27,6 +27,20 @@ export const dataReducer=(state=initialState,action)=>{
         isLoading:false,
         data:[],
         isError:true,
+        }
+    } 
+    case GET_ASC :{
+        return{
+        ...state,
+        isLoading:false,
+        data:action.payload,
+        }
+    } 
+    case GET_DESC :{
+        return{
+        ...state,
+        isLoading:false,
+        data:action.payload,
         }
     } 
     default:{
