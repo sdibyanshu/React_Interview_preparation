@@ -96,3 +96,20 @@ axios.get("https://fakestoreapi.com/products/category/electronics")
 
 }
 
+export const Details=(id)=>(dispatch)=>{
+  dispatch({type:GET_LOADING_DATA})
+// fetching data here
+axios.get(`https://fakestoreapi.com/products/${id}`)
+
+
+// Successfullly got data 
+.then(({data})=>dispatch(getjewwlData(data)))
+
+
+
+// data error 
+.catch(()=>dispatch(getDataError()));
+
+}
+
+

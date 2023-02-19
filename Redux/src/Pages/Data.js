@@ -24,21 +24,30 @@ function Data() {
   }
 return (
     <>
+
+{/* Implemented sorting  */}
+
       <label htmlFor="">Sort Ascending</label>
       <input type="checkbox" onChange={()=>dispatch(Ascendingdata())}/>
       <label htmlFor="">Sort Descending</label>
       <input type="checkbox" onChange={()=>dispatch(Descendingdata())}/>
       
+
+{/* implemented filtering  */}
+
 <button onClick={handleChange}>Jewwlw</button>
 
       
       <div className="apnadiv" >
         {data.map((el) => (
+         <Link >
+
           <div>
             <img src={el.image} alt="" />
             <p>{el.price}</p>
             <p>{el.category}</p>
           </div>
+         </Link>
         ))}
       </div>
     </>
