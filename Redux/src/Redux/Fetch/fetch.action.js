@@ -25,7 +25,7 @@ const getDescData=(payload)=>({
 export const getAlldata=()=>(dispatch)=>{
   dispatch({type:GET_LOADING_DATA})
 // fetching data here
-axios.get("https://fakestoreapi.com/products")
+axios.get("https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-products")
 
 
 // Successfullly got data 
@@ -44,7 +44,7 @@ axios.get("https://fakestoreapi.com/products")
 export const Ascendingdata=()=>(dispatch)=>{
   dispatch({type:GET_LOADING_DATA})
 // fetching data here
-axios.get("https://fakestoreapi.com/products?sort=asc")
+axios.get("https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-products?sort=price&order=asc")
 
 
 // Successfullly got data 
@@ -63,7 +63,7 @@ axios.get("https://fakestoreapi.com/products?sort=asc")
 export const Descendingdata=()=>(dispatch)=>{
   dispatch({type:GET_LOADING_DATA})
 // fetching data here
-axios.get("https://fakestoreapi.com/products?sort=desc")
+axios.get("https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-products?sort=price&order=desc")
 
 
 // Successfullly got data 

@@ -18,7 +18,7 @@ export const dataReducer=(state=initialState,action)=>{
         return{
         ...state,
         isLoading:false,
-        data:action.payload,
+        data:action.payload.data,
         }
     } 
     case GET_DATA_ERROR :{
@@ -33,14 +33,14 @@ export const dataReducer=(state=initialState,action)=>{
         return{
         ...state,
         isLoading:false,
-        data:action.payload,
+        data:action.payload.data,
         }
     } 
     case GET_DESC :{
         return{
         ...state,
         isLoading:false,
-        data:action.payload,
+        data:action.payload.data,
         }
     } 
     default:{
