@@ -1,4 +1,4 @@
-import {GET_DATA,GET_LOADING_DATA,GET_DATA_ERROR,GET_ASC,GET_DESC} from "./fetch.actiontype";
+import {GET_DATA,GET_LOADING_DATA,GET_DATA_ERROR,GET_ASC,GET_DESC,GET_JEWEL} from "./fetch.actiontype";
 
 const initialState={
     isLoading: false,
@@ -18,7 +18,7 @@ export const dataReducer=(state=initialState,action)=>{
         return{
         ...state,
         isLoading:false,
-        data:action.payload.data,
+        data:action.payload,
         }
     } 
     case GET_DATA_ERROR :{
@@ -33,14 +33,21 @@ export const dataReducer=(state=initialState,action)=>{
         return{
         ...state,
         isLoading:false,
-        data:action.payload.data,
+        data:action.payload,
         }
     } 
     case GET_DESC :{
         return{
         ...state,
         isLoading:false,
-        data:action.payload.data,
+        data:action.payload,
+        }
+    } 
+    case GET_JEWEL :{
+        return{
+        ...state,
+        isLoading:false,
+        data:action.payload,
         }
     } 
     default:{

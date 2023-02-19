@@ -1,6 +1,6 @@
 
 import axios from "axios";
-import {GET_DATA,GET_LOADING_DATA,GET_DATA_ERROR,GET_ASC,GET_DESC} from "./fetch.actiontype";
+import {GET_DATA,GET_LOADING_DATA,GET_DATA_ERROR,GET_ASC,GET_DESC,GET_JEWEL} from "./fetch.actiontype";
 
 const getDataError=()=>({
     type:GET_DATA_ERROR,
@@ -19,13 +19,17 @@ const getDescData=(payload)=>({
   type:GET_DESC,
   payload,
 })
+const getjewwlData=(payload)=>({
+  type:GET_JEWEL,
+  payload,
+})
 
 
 
 export const getAlldata=()=>(dispatch)=>{
   dispatch({type:GET_LOADING_DATA})
 // fetching data here
-axios.get("https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-products")
+axios.get("https://fakestoreapi.com/products")
 
 
 // Successfullly got data 
@@ -44,7 +48,7 @@ axios.get("https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-p
 export const Ascendingdata=()=>(dispatch)=>{
   dispatch({type:GET_LOADING_DATA})
 // fetching data here
-axios.get("https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-products?sort=price&order=asc")
+axios.get("https://fakestoreapi.com/products?sort=asc")
 
 
 // Successfullly got data 
@@ -63,11 +67,27 @@ axios.get("https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-p
 export const Descendingdata=()=>(dispatch)=>{
   dispatch({type:GET_LOADING_DATA})
 // fetching data here
-axios.get("https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-products?sort=price&order=desc")
+axios.get("https://fakestoreapi.com/products?sort=desc")
 
 
 // Successfullly got data 
 .then(({data})=>dispatch(getDescData(data)))
+
+
+
+// data error 
+.catch(()=>dispatch(getDataError()));
+
+}
+
+export const Jewwldata=()=>(dispatch)=>{
+  dispatch({type:GET_LOADING_DATA})
+// fetching data here
+axios.get("https://fakestoreapi.com/products/category/electronics")
+
+
+// Successfullly got data 
+.then(({data})=>dispatch(getjewwlData(data)))
 
 
 
