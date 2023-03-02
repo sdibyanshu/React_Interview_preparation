@@ -45,4 +45,4 @@ const EventHandle = () => {
   )
 }
 
-export default EventHandle
+export default EventHandle;

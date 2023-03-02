@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 function StopWatch() {
   const [time, settime] = useState(0);
   const [start, setstart] = useState(false);
+
+
   useEffect(() => {
     let interval = null;
     if (start) {

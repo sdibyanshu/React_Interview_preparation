@@ -1,12 +1,13 @@
 import "./App.css";
-import EventHandle from "./Components/MiniCalculator/Event";
+import StopWatch from "./Components/StopWatch/StopWatch";
+
 
 
 
 function App() {
   return (
     <div className="App">
-    <EventHandle/>
+       <StopWatch/>
     </div>
   )
 }
