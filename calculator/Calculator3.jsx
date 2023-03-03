@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 
-const EventHandle = () => {
+const Calculator3 = () => {
     const[add1,Setadd]=useState([])
     const[add2,Setadd2]=useState([])
+
     const[add3,Setadd3]=useState([])
 
    
@@ -22,11 +23,15 @@ const EventHandle = () => {
         const result= Number(num1) * Number(num2)
         Setadd3(result)
         
-         
- 
+     }
+
+     const DivNums=(num1,num2)=>{
+        const result= Number(num1) / Number(num2)
+        Setadd3(result)  
      }
   return (
     <div>
+         <h1>Calculator3 Build by :- Prem</h1>
         <h1>Result: {add3}</h1>
         <input type="number" placeholder='num1' onChange={(e)=>Setadd(e.target.value)} value={add1}/>
         <input type="number" placeholder='num2' onChange={(e)=>Setadd2(e.target.value)} value={add2}/>
@@ -39,10 +44,12 @@ const EventHandle = () => {
         <br/>
         <button onClick={()=>MulNums(add1, add2)}>Multiply Number</button>
 
+        <button onClick={()=>DivNums(add1, add2)}>Divide Number</button>
+
 
        
        </div>
   )
 }
 
-export default EventHandle;
+export default Calculator3 ;
