@@ -40,14 +40,14 @@ return (
       
       <div className="apnadiv" >
         {data.map((el) => (
-         <Link >
+        
 
           <div>
             <img src={el.image} alt="" />
             <p>{el.price}</p>
             <p>{el.category}</p>
           </div>
-         </Link>
+        
         ))}
       </div>
     </>
