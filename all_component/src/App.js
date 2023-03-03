@@ -1,14 +1,11 @@
 import "./App.css";
-import FetchPagination from "./Components/FetchPagination/FetchPagination";
-import St from "./Components/StopWatch/St";
-
-import StopWatch from "./Components/StopWatch/StopWatch";
+import Show from "./Components/Show_hide_elem/Show";
 
 
 function App() {
   return (
     <div className="App">
-     <FetchPagination/>
+     <Show/>
     </div>
   )
 }
