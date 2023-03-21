@@ -9,6 +9,7 @@ import {
 
 function Todo() {
   const { todo, isLoading, isError } = useSelector((store) => store.todo);
+  const [info,setinfo ] = useState("");
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getTodo());
@@ -17,6 +18,19 @@ function Todo() {
   const handleDelete=(id)=>{
 dispatch(deleteTodo(id));
   }
+  const handlechange=(e)=>{
+   const {name,value}=e.target;
+    setinfo({
+      ...info,
+      [name]:value,
+
+    }
+    )
+  }
+  const senddata=()=>{
+    dispatch(createTodo(info))
+  }
+  
 
   if (isLoading) {
     return <>...loading</>;
@@ -27,10 +41,14 @@ dispatch(deleteTodo(id));
 
   return (
     <>
-     
-     
-     
-     
+     <input type="text" 
+    placeholder="Post todo here"
+    
+    onChange={(e)=>handlechange(e)}
+    name="name"
+      />
+      <button onClick={senddata}>Post</button>
+      
       {todo.map((el) => (
         <div key={el.id} style={{display:"flex",justifyContent:"center"}}>
           <p>{el.name}</p>

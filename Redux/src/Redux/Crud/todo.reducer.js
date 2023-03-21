@@ -33,16 +33,19 @@ export const todoReducer = (state = initState, action) => {
       return {
         ...state,
         isLoading: false,
-        todo: [...state.todo, action.payload],
+        todo:[...state.todo, action.payload],
       };
     }
     case types.UPDATE_TODO: {
+      const updatedItems = state.todo.map(el =>
+        el.id === action.payload.id ? action.payload : el
+      );
+     
       return {
         ...state,
         isLoading: false,
-        todo: state.todo.map((el) =>
-          el.id === action.payload.el.id ? action.payload.el : el
-        ),
+        todo:updatedItems,
+        
       };
     }
     case types.DELETE_TODO: {
