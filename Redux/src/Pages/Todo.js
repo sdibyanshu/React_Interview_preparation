@@ -14,6 +14,9 @@ function Todo() {
     dispatch(getTodo());
   }, []);
 
+  const handleDelete=(id)=>{
+dispatch(deleteTodo(id));
+  }
 
   if (isLoading) {
     return <>...loading</>;
@@ -24,10 +27,14 @@ function Todo() {
 
   return (
     <>
+     
+     
+     
+     
       {todo.map((el) => (
-        <div>
-          <p key={el.id}></p>
+        <div key={el.id} style={{display:"flex",justifyContent:"center"}}>
           <p>{el.name}</p>
+          <button onClick={()=>handleDelete(el.id)}>Delete</button>
         </div>
       ))}
     </>

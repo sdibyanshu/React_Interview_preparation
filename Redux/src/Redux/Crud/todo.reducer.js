@@ -48,7 +48,7 @@ export const todoReducer = (state = initState, action) => {
     case types.DELETE_TODO: {
       return {
         ...state,
-        todo: state.todo.filter((el) => el.id !== action.payload.todoID),
+        todo: state.todo.filter((el) => el.id !== action.payload),
       };
     }
 
