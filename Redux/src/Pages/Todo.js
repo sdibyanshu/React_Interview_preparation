@@ -9,28 +9,40 @@ import {
 
 function Todo() {
   const { todo, isLoading, isError } = useSelector((store) => store.todo);
-  const [info,setinfo ] = useState("");
+  const [info, setinfo] = useState("");
   const dispatch = useDispatch();
+  
+  // READ REQUEST 
+  // For showing Fetched Data from APi
   useEffect(() => {
     dispatch(getTodo());
   }, []);
 
-  const handleDelete=(id)=>{
-dispatch(deleteTodo(id));
-  }
-  const handlechange=(e)=>{
-   const {name,value}=e.target;
+  
+  // DELETE REQUEST 
+  // For deleting particular item 
+  const handleDelete = (id) => {
+    dispatch(deleteTodo(id));
+  };
+
+  
+  // For adding new todo in api input box
+  const handlechange = (e) => {
+    const { name, value } = e.target;
     setinfo({
       ...info,
-      [name]:value,
-
-    }
-    )
-  }
-  const senddata=()=>{
-    dispatch(createTodo(info))
-  }
+      [name]: value,
+    });
+  };
   
+  // POST REQUEST 
+  const senddata = () => {
+    dispatch(createTodo(info));
+  };
+
+  const handleupdate=()=>{
+
+  }
 
   if (isLoading) {
     return <>...loading</>;
@@ -41,18 +53,19 @@ dispatch(deleteTodo(id));
 
   return (
     <>
-     <input type="text" 
-    placeholder="Post todo here"
-    
-    onChange={(e)=>handlechange(e)}
-    name="name"
+      <input
+        type="text"
+        placeholder="Post todo here"
+        onChange={(e) => handlechange(e)}
+        name="name"
       />
       <button onClick={senddata}>Post</button>
-      
+
       {todo.map((el) => (
-        <div key={el.id} style={{display:"flex",justifyContent:"center"}}>
+        <div key={el.id} style={{ display: "flex", justifyContent: "center" }}>
           <p>{el.name}</p>
-          <button onClick={()=>handleDelete(el.id)}>Delete</button>
+          <button onClick={() => handleDelete(el.id)}>Delete</button>
+          <button onClick={() => handleupdate(el.id)}>Delete</button>
         </div>
       ))}
     </>

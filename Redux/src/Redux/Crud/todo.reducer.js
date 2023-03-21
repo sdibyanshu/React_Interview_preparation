@@ -12,7 +12,7 @@ export const todoReducer = (state = initState, action) => {
       return {
         ...state,
         todo: action.payload,
-        isLoading:false
+        isLoading: false,
       };
     }
     case types.GET_LOADING_TODO: {
@@ -33,19 +33,18 @@ export const todoReducer = (state = initState, action) => {
       return {
         ...state,
         isLoading: false,
-        todo:[...state.todo, action.payload],
+        todo: [...state.todo, action.payload],
       };
     }
     case types.UPDATE_TODO: {
-      const updatedItems = state.todo.map(el =>
+      const updatedItems = state.todo.map((el) =>
         el.id === action.payload.id ? action.payload : el
       );
-     
+
       return {
         ...state,
         isLoading: false,
-        todo:updatedItems,
-        
+        todo: updatedItems,
       };
     }
     case types.DELETE_TODO: {
