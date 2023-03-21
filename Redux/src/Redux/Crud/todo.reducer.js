@@ -12,6 +12,7 @@ export const todoReducer = (state = initState, action) => {
       return {
         ...state,
         todo: action.payload,
+        isLoading:false
       };
     }
     case types.GET_LOADING_TODO: {
