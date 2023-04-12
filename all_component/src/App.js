@@ -1,6 +1,6 @@
 import "./App.css";
 
-import Button from "./Components/Disable_a_button/Button";
+import Timer from "./Components/SimpleTimerwithbuttons/Timer"
 
 
 
@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
 
-<Button/>
+<Timer/>
     </div>
   )
 }

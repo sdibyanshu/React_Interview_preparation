@@ -40,8 +40,8 @@ function Todo() {
     dispatch(createTodo(info));
   };
 
-  const handleupdate=()=>{
-
+  const handleupdate=(id)=>{
+console.log(id)
   }
 
   if (isLoading) {
@@ -65,7 +65,7 @@ function Todo() {
         <div key={el.id} style={{ display: "flex", justifyContent: "center" }}>
           <p>{el.name}</p>
           <button onClick={() => handleDelete(el.id)}>Delete</button>
-          <button onClick={() => handleupdate(el.id)}>Delete</button>
+          <button onClick={() => handleupdate(el.id)}>Update</button>
         </div>
       ))}
     </>
